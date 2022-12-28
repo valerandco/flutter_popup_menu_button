@@ -17,6 +17,8 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.brown[200],
         actions: [
           PopupMenuButton<MenuItem>(
+            color: Colors.brown[100],
+
             onSelected: (value) {
               
             },
