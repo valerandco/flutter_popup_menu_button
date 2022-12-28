@@ -15,6 +15,27 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Popup menu'),
         backgroundColor: Colors.brown[200],
+        actions: [
+          PopupMenuButton<MenuItem>(
+            onSelected: (value) {
+              
+            },
+            itemBuilder: (context) => const [
+              PopupMenuItem(
+                child: Text('Item 1'),
+              ),
+              PopupMenuItem(
+                child: Text('Item 2'),
+              ),
+              PopupMenuItem(
+                child: Text('Item 3'),
+              ),
+              PopupMenuItem(
+                child: Text('Item 4'),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
