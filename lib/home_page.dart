@@ -13,7 +13,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
-        title: Text('Popup menu'),
+        title: const Text('Popup menu'),
         backgroundColor: Colors.brown[200],
         actions: [
           PopupMenuButton<MenuItem>(
