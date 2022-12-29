@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_popup_menu_button/popup_dir/item1.dart';
 
 import 'home_page.dart';
 
@@ -19,6 +20,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.brown,
       ),
       home: const HomePage(),
+      routes: {
+        '/item1': (context) => const item1(),
+      },
     );
   }
 }

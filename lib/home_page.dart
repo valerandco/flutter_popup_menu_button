@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +28,7 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (context) => const [
               PopupMenuItem(
                 child: Text('Item 1'),
+                value: '/item1',
               ),
               PopupMenuItem(
                 child: Text('Item 2'),
