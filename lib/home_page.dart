@@ -1,48 +1,50 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-
+class PopupMenuButtonExample1 extends StatefulWidget {
+  const PopupMenuButtonExample1({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  _PopupMenuButtonExample1State createState() =>
+      _PopupMenuButtonExample1State();
 }
 
-class _HomePageState extends State<HomePage> {
+class _PopupMenuButtonExample1State extends State {
+  var selectedItem = '';
 
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
-        title: const Text('Popup menu'),
-        backgroundColor: Colors.brown[200],
+        title: const Text("Popup Menu"),
+        centerTitle: true,
         actions: [
-          PopupMenuButton<MenuItem>(
-            color: Colors.brown[100],
-
-            onSelected: (value) {
-              
-            },
-            itemBuilder: (context) => const [
+          PopupMenuButton(onSelected: (value) {
+            // your logic
+            setState(() {
+              selectedItem = value.toString();
+            });
+            print(value);
+            Navigator.pushNamed(context, value.toString());
+          }, itemBuilder: (BuildContext bc) {
+            return const [
               PopupMenuItem(
-                child: Text('Item 1'),
                 value: '/item1',
+                child: Text("Item 1"),
               ),
               PopupMenuItem(
-                child: Text('Item 2'),
+                value: '/about',
+                child: Text("Item 2"),
               ),
               PopupMenuItem(
-                child: Text('Item 3'),
-              ),
-              PopupMenuItem(
-                child: Text('Item 4'),
-              ),
-            ],
-          ),
+                value: '/contact',
+                child: Text("Item 3"),
+              )
+            ];
+          })
         ],
       ),
+
     );
   }
 }

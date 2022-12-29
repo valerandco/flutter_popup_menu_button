@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
-      home: const HomePage(),
+      home: PopupMenuButtonExample1(),
       routes: {
         '/item1': (context) => const item1(),
       },
