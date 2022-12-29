@@ -20,11 +20,10 @@ class _PopupMenuButtonExample1State extends State {
         centerTitle: true,
         actions: [
           PopupMenuButton(onSelected: (value) {
-            // your logic
+
             setState(() {
               selectedItem = value.toString();
             });
-            print(value);
             Navigator.pushNamed(context, value.toString());
           }, itemBuilder: (BuildContext bc) {
             return const [
