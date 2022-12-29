@@ -33,11 +33,11 @@ class _PopupMenuButtonExample1State extends State {
                 child: Text("Item 1"),
               ),
               PopupMenuItem(
-                value: '/about',
+                value: '/item2',
                 child: Text("Item 2"),
               ),
               PopupMenuItem(
-                value: '/contact',
+                value: '/item3',
                 child: Text("Item 3"),
               )
             ];

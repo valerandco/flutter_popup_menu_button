@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_popup_menu_button/popup_dir/item1.dart';
+import 'package:flutter_popup_menu_button/popup_dir/item2.dart';
+import 'package:flutter_popup_menu_button/popup_dir/item3.dart';
 
 import 'home_page.dart';
 
@@ -22,6 +24,8 @@ class MyApp extends StatelessWidget {
       home: PopupMenuButtonExample1(),
       routes: {
         '/item1': (context) => const item1(),
+        '/item2': (context) => const item2(),
+        '/item3': (context) => const item3(),
       },
     );
   }
